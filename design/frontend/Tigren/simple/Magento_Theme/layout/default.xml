@@ -1,3 +1,6 @@
+<!-- @author    Tigren Solutions <info@tigren.com>-->
+<!-- @copyright Copyright (c) 2023 Tigren Solutions <https://www.tigren.com>. All rights reserved.-->
+<!-- @license   Open Software License ("OSL") v. 3.0-->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="logo">
@@ -7,19 +10,10 @@
                 <argument name="logo_img_height" xsi:type="number">300</argument>
             </arguments>
         </referenceBlock>
+        <!--        <move element="extra-block1" destination="header.panel.wrapper" before="header.panel" />-->
         <referenceContainer name="footer" remove="true" />
         <referenceContainer name="footer-container">
-            <container name="footer-custom" as="footer.cust" label="New Footer" htmlTag="div" htmlClass="footer footer-new content">
-                <block class="Magento\Store\Block\Switcher" name="store_switcher" as="store_switcher" template="Magento_Store::switch/stores.phtml" />
-                <!--                <block class="Magento\Framework\View\Element\Html\Links" name="footer_links">-->
-                <!--                    <arguments>-->
-                <!--                        <argument name="css_class" xsi:type="string">footer links</argument>-->
-                <!--                    </arguments>-->
-                <!--                </block>-->
-                <block class="Magento\Theme\Block\Html\Footer" name="copyright" template="Magento_Theme::html/copyright.phtml" />
-                <block class="Magento\Framework\View\Element\Template" name="report.bugs" template="Magento_Theme::html/bugreport.phtml" />
-                <block class="Magento\Framework\View\Element\Template" name="extra-block1" template="Magento_Theme::html/footer/links.phtml" />
-            </container>
+            <block class="Magento\Framework\View\Element\Template" name="extra-block1" template="Magento_Theme::html/footer/links.phtml" />
         </referenceContainer>
     </body>
 </page>
